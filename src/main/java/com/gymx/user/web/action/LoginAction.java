@@ -1,4 +1,4 @@
-package com.gymx.user.action;
+package com.gymx.user.web.action;
 
 import com.gymx.user.service.IUserService;
 

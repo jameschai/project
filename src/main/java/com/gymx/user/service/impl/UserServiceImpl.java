@@ -1,5 +1,6 @@
 package com.gymx.user.service.impl;
 
+import com.alibaba.druid.pool.DruidDataSource;
 import com.gymx.user.service.IUserService;
 
 /**
@@ -7,11 +8,18 @@ import com.gymx.user.service.IUserService;
  */
 public class UserServiceImpl implements IUserService {
 
+    private DruidDataSource dataSource;
+
     public void test(){
         System.out.println("测试spring");
     }
 
-    public String queryUser(String userName){
+    public String findUserByName(String userName){
+        String sql = "select * from user";
         return "success";
+    }
+
+    public void setDataSource(DruidDataSource dataSource) {
+        this.dataSource = dataSource;
     }
 }

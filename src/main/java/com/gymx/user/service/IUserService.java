@@ -7,5 +7,5 @@ public interface IUserService {
 
     void test();
 
-    String queryUser(String userName);
+    String findUserByName(String userName);
 }

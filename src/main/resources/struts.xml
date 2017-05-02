@@ -10,7 +10,7 @@
         <action name="Login">
             <result>/login.jsp</result>
         </action>
-        <action name="Welcome" class="com.gymx.user.action.LoginAction">
+        <action name="Welcome" class="com.gymx.user.web.action.LoginAction">
             <result name="SUCCESS">/welcome.jsp</result>
         </action>
     </package>
