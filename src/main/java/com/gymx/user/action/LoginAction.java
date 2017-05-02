@@ -1,9 +1,11 @@
 package com.gymx.user.action;
 
+import com.gymx.user.service.IUserService;
+
 /**
  * Created by Administrator on 2017/4/30.
  */
-public class loginAction {
+public class LoginAction {
 
     private String username;
     private String password;
@@ -24,9 +26,20 @@ public class loginAction {
         this.password = password;
     }
 
+    private IUserService userService;
+
+    public IUserService getUserService() {
+        return userService;
+    }
+
+    public void setUserService(IUserService userService) {
+        this.userService = userService;
+    }
+
     // all struts logic here
     public String execute() {
 
+        userService.test();
         return "SUCCESS";
 
     }
