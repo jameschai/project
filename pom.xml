@@ -61,6 +61,11 @@
             <version>3.2.3.RELEASE</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>1.8.9</version>
+        </dependency>
 
         <!-- mybatis -->
         <dependency>

@@ -4,7 +4,7 @@
 
     <!--配置所有mybatis类的别名  -->
     <typeAliases>
-        <typeAlias alias="user" type="com.gymx.user.model.User"/>
+        <typeAlias alias="User" type="com.gymx.user.model.User"/>
     </typeAliases>
 
     <!-- 指定映射文件 -->

@@ -1,17 +1,20 @@
 package com.gymx.user.service.impl;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.gymx.user.dao.impl.UserDaoImpl;
+import com.gymx.user.model.User;
+import com.gymx.user.service.BaseService;
 import com.gymx.user.service.IUserService;
 
 /**
  * Created by Administrator on 2017/5/1.
  */
-public class UserServiceImpl implements IUserService {
+public class UserServiceImpl extends BaseService implements IUserService {
 
-    private DruidDataSource dataSource;
+    private UserDaoImpl userDao;
 
-    public void test(){
-        System.out.println("测试spring");
+    public void addUser(User user) {
+        userDao.save(user);
     }
 
     public String findUserByName(String userName){
@@ -19,7 +22,11 @@ public class UserServiceImpl implements IUserService {
         return "success";
     }
 
-    public void setDataSource(DruidDataSource dataSource) {
-        this.dataSource = dataSource;
+    public void setUserDao(UserDaoImpl userDao) {
+        this.userDao = userDao;
+    }
+
+    public UserDaoImpl getUserDao() {
+        return userDao;
     }
 }

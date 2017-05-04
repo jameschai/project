@@ -9,5 +9,13 @@ import java.util.List;
  */
 public interface IUserDao {
 
-    List<User> findUsers();
+    List<User> findAllUsers();
+
+    User findUserByName(String name);
+
+    void save(User user);
+
+    void update(User user);
+
+    void delete(int id);
 }

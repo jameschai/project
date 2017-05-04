@@ -5,7 +5,7 @@ import com.gymx.user.service.IUserService;
 /**
  * Created by Administrator on 2017/4/30.
  */
-public class LoginAction {
+public class LoginAction extends BaseAction {
 
     private String username;
     private String password;
@@ -39,7 +39,6 @@ public class LoginAction {
     // all struts logic here
     public String execute() {
 
-        userService.test();
         return "SUCCESS";
 
     }

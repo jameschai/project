@@ -9,10 +9,27 @@
         <result property="password" column="password" />
     </resultMap>
 
-    <select id="queryUsers" resultMap="userMap">
+    <select id="findAllUsers" resultMap="userMap">
         <![CDATA[
         SELECT * FROM user
         ]]>
     </select>
+
+    <select id="findUserByName" resultType="User" parameterType="string">
+        SELECT * FROM user WHERE name = #{name}
+    </select>
+
+    <insert id="save" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO USER(name,password,create_by,create_on,update_by,update_on)
+        VALUES(#{name},#{password},"sysadmin",now(),"sysadmin",now() )
+    </insert>
+
+    <update id="update" parameterType="User" >
+        UPDATE USER SET name=#{name},password=#{password},update_by="sysadmin",update_on=now() WHERE id=#{id}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        delete from user where id=#{id}
+    </delete>
 
 </mapper>
