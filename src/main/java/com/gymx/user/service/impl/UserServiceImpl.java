@@ -1,15 +1,13 @@
 package com.gymx.user.service.impl;
 
-import com.alibaba.druid.pool.DruidDataSource;
 import com.gymx.user.dao.impl.UserDaoImpl;
 import com.gymx.user.model.User;
-import com.gymx.user.service.BaseService;
 import com.gymx.user.service.IUserService;
 
 /**
  * Created by Administrator on 2017/5/1.
  */
-public class UserServiceImpl extends BaseService implements IUserService {
+public class UserServiceImpl extends BaseServiceImpl implements IUserService {
 
     private UserDaoImpl userDao;
 

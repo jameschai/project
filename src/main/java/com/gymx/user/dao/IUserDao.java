@@ -7,15 +7,10 @@ import java.util.List;
 /**
  * Created by Administrator on 2017/5/2.
  */
-public interface IUserDao {
+public interface IUserDao extends IBaseDao<User>{
 
     List<User> findAllUsers();
 
     User findUserByName(String name);
 
-    void save(User user);
-
-    void update(User user);
-
-    void delete(int id);
 }

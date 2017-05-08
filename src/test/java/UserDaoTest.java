@@ -21,21 +21,22 @@ public class UserDaoTest extends AbstractIT {
     @Test
     public void saveTest(){
         User user = new User();
-        user.setName("admin");
+        user.setName("james");
         user.setPassword("1234");
-        userDao.save(user);
+        User u = userDao.save(user);
+        logger.info("ID:" + u.getId());
     }
 
     @Test
     public void updateTest(){
         User user = userDao.findUserByName("admin");
-        user.setPassword("123456");
+        user.setPassword("1234567");
         userDao.update(user);
     }
 
     @Test
     public void deleteTest(){
-        User user = userDao.findUserByName("admin");
+        User user = userDao.findUserByName("james");
         userDao.delete(user.getId());
     }
 
